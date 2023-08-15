@@ -5,7 +5,7 @@ while(arr.length<3){
     if(!arr.includes(num)) arr.push(num);
 }
 
-alert('컴퓨터가 숫자를 생성함');
+console.log('컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!');
 
 let count =0;
 let result =``;
@@ -16,6 +16,7 @@ while(true){
     count++;
 
     let user = prompt(`${count} 번째 숫자를 입력하세요 :`);
+    console.log(`${count}번째 시도 : ${user}`);
 
     user = user.split('').map((x)=>Number(x));
 
@@ -31,9 +32,11 @@ while(true){
     else result =`${ball}B${strike}S`;
 
     alert(result);
+    console.log(result);
 
     if(strike===3){
     alert(count+'번 만에 맞히셨습니다. 게임을 종료합니다');
+    console.log(count+'번 만에 맞히셨습니다. 게임을 종료합니다');
         break;
     }
 }
